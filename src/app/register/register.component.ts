@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  nuevoUsuario(){
+  nuevoUsuario(f:any){
     console.log('Creando usuario');
   }
 

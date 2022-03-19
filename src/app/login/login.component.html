@@ -1,8 +1,9 @@
 <div class="mx-auto">
-
-
     <div class="card">
         <div class="container">
+            <div class="alert alert-danger" role="alert" *ngIf="incorrect">
+                Usuario o contraseña incorrecta
+            </div>
             <div class="card-title">
                 <div class="row flex-row justify-content-center alig-items-center">
                     <h5>Iniciar sesión</h5>
@@ -10,22 +11,22 @@
             </div>
             <div class="card-body">
 
-                <form>
+                <form (ngSubmit)="ingresar(f)" #f="ngForm">
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="exampleInputEmail1" class="form-label">Ingrese su usuario</label>
-                            <input type="text" class="form-control" id="text-usuario">
+                            <label class="form-label">Ingrese su username</label>
+                            <input type="text" name="username" class="form-control" ngModel autocomplete="off">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Ingrese su contraseña</label>
-                            <input type="password" class="form-control" id="text-usuario">
+                            <label class="form-label">Ingrese su nombre</label>
+                            <input type="password" class="form-control" name="name" ngModel autocomplete="off">
                         </div>
                     </div>
                     <div class="row">
-                        <button type="submit" (click)="ingresar()" class="btn btn-primary">Ingresar</button>
+                        <button type="submit" class="btn btn-primary" ngSubmit>Ingresar</button>
                     </div>
                 </form>
             </div>
