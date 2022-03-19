@@ -1,15 +1,10 @@
 .card {
-    width: 60%;
+    width: 50%;
     margin-top: 5%;
 }
 
 .mx-auto {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.card-body {
-    display: flex;
     justify-content: center;
 }
