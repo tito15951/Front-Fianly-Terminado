@@ -9,8 +9,8 @@ import {Product} from './models/product';
   providedIn: 'root'
 })
 export class ServicesService {
-  baseURL=environment.apiURL+'users/';
-  baseURLProducts=environment.apiURLProducts+'products/';
+  baseURL='https://jsonplaceholder.typicode.com/users/';
+  baseURLProducts='https://fakestoreapi.com/products/';
   constructor(private http:HttpClient) { }
   /*USÉ DIFERENTES APIS, UNA PARA LOS PRODUCTOS Y OTRA PARA LOS USUARIOS*/
 
